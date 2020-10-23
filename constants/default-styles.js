@@ -2,10 +2,17 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
     bodyText: {
-        fontSize: 'open-sans'
+        fontFamily: 'open-sans'
     },
     title: {
         fontFamily: 'open-sans-bold',
-        fontSize: 18
+        fontSize: 18,
+        textAlign: 'center'
+    },
+    playerNumber: {
+        fontFamily: 'open-sans-bold',
+        fontSize: 18,
+        textAlign: 'center',
+        color: '#c717fc'
     }
 });

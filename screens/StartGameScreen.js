@@ -27,8 +27,8 @@ const StartGameScreen = props => {
         const chosenNumber = parseInt(enteredValue);
         if (isNaN(chosenNumber) || chosenNumber <= 0 || chosenNumber > 99) {
             Alert.alert(
-                'Invalid number!',
-                'Number has to be a number between 1 and 99.',
+                '',
+                'Please choose a number between 1 and 99.',
                 [{text: 'Okay', style: 'destructive', onPress: resetInputHandler }]
             );
             return;
@@ -61,7 +61,7 @@ const StartGameScreen = props => {
             <View style={styles.screen}>
                 <TitleText style={styles.title}>Start a New Game!</TitleText>
                 <Card style={styles.inputContainer}>
-                    <BodyText>Select a Number</BodyText>
+                    <BodyText>Select a number between 1 and 99</BodyText>
                     <Input 
                         style={styles.input}
                         blurOnSubmit

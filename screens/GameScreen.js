@@ -46,7 +46,7 @@ const GameScreen = props => {
                 (direction === 'lower' && currentGuess < props.userChoice) ||
                 (direction === 'higher' && currentGuess > props.userChoice)
             ) {
-                Alert.alert('Don\'t cheat!', 'You know that\'s wrong...', [
+                Alert.alert('Don\'t cheat!', 'You know that\'s wrong ... Your number is ' + userChoice + '.', [
                     {text: 'Sorry!', style: 'cancel'}
                 ]);
                 return;
@@ -85,6 +85,8 @@ const GameScreen = props => {
                 contentContainerStyle={styles.list}
             />
             </View>
+                <Text style={DefaultStyles.title}>Your device is trying to guess the number:</Text>
+                <Text style={DefaultStyles.playerNumber}>{userChoice}</Text>
         </View>
     );
 };

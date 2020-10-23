@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Image } from 'react-native';
+import { View, StyleSheet, Text, Image } from 'react-native';
 
 import TitleText from '../components/TitleText';
 import BodyText from '../components/BodyText';
@@ -15,10 +15,10 @@ const GameOverScreen = props => {
                     source={require('../assets/success.png')} // Local Image
                     // source={{uri: 'https://cdn.pixabay.com/photo/2016/05/05/23/52/mountain-summit-1375015_960_720.jpg'}} // Network (Web) Image
                     style={styles.image}
-                    resizeMode="contain" />
+                />
             </View>
             <View style={styles.resultContainer}>
-                <BodyText style={styles.resultText}>Your phone needed{' '}
+                <BodyText style={styles.resultText}>Your device needed{' '}
                 <Text style={styles.highlight}>{props.roundsNumber}</Text> rounds to guess the number{' '}
                 <Text style={styles.highlight}>{props.userNumber}</Text>.
                 </BodyText>
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     },
     highlight: {
         color: Colors.primary,
-        fontFamily: 'open-sans=bold'
+        fontFamily: 'open-sans-bold'
     }
 });
 
